@@ -1,10 +1,16 @@
 import Navbar from "./Navbar";
 
-const Header = () => {
+type HeaderProps = {
+    isLoggedIn: boolean;
+    userImage?: string | null;
+  };
+
+const Header = ({ isLoggedIn, userImage }: HeaderProps) => {
+ 
   return (
     <>
     <header>
-        <Navbar />
+        <Navbar isLoggedIn={isLoggedIn} userImage={userImage} />
     </header>
     
     </>
